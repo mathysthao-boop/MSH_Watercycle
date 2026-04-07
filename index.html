@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaCampus — Documentation</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f1eb;
+    --surface: #ffffff;
+    --ink: #1a1a18;
+    --ink2: #5a5a52;
+    --ink3: #9a9a90;
+    --accent: #285ab8;
+    --accent2: #38cddb;
+    --accent-light: #d8f3dc;
+    --border: rgba(26,26,24,0.10);
+    --radius: 12px;
+    --shadow: 0 2px 16px rgba(0,0,0,0.07);
+  }
+
+  header a, 
+  header a:visited, 
+  header a:active {
+    color: white !important;
+    text-decoration: none !important;
+  }
+
+  header a:hover {
+    color: var(--accent2) !important;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── Header (Identique au premier fichier) ── */
+  header {
+    background: var(--accent);
+    color: white;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+  }
+  .logo-drop {
+    width: 25px; height: 25px;
+    background: var(--accent2);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(135deg);
+  }
+
+  /* ── Navigation ── */
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  nav a:hover { opacity: 1; }
+  nav a.active { opacity: 1; border-bottom: 2px solid var(--accent2); }
+
+  /* ── Contenu ── */
+  .container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .content-card {
+    background: var(--surface);
+    padding: 48px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    margin-bottom: 24px;
+    color: var(--accent);
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    margin: 32px 0 16px 0;
+  }
+
+  p { margin-bottom: 16px; color: var(--ink2); }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-drop"></div>
+    AquaCampus
+  </a>
+  <nav style="display: flex; gap: 20px;">
+  <a href="index.html">Documentation</a>
+  <a href="calculateur.html">Calculateur</a>
+</nav>
+</header>
+
+<div class="container">
+  <article class="content-card">
+    <h1>Documentation du projet</h1>
+    <p>Bienvenue dans l'espace de documentation d'AquaCampus. Ce projet vise à optimiser la gestion des ressources en eau sur les campus universitaires.</p>
+
+    <h2>Fonctionnement du calculateur</h2>
+    <p>Le calculateur utilise les données de pluviométrie régionales croisées avec la surface de toiture et les coefficients de ruissellement pour estimer l'offre en eau de pluie.</p>
+
+    <h2>Récupération des eaux grises</h2>
+    <p>
